@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(mkdir:*)",
+      "Bash(cmake --build:*)",
+      "Bash(./build/Release/fconvert.exe:*)",
+      "Bash(g++:*)",
+      "Bash(./create_test_bmp.exe)",
+      "Bash(\"C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/cl.exe\" /EHsc /Fe:create_test_bmp.exe create_test_bmp.cpp)",
+      "Bash(python3:*)",
+      "Bash(cmp:*)",
+      "Bash(test.txt)",
+      "Bash(gzip:*)",
+      "Bash(test_large.bmp.gz)",
+      "Bash(tar:*)",
+      "Bash(cat:*)",
+      "Bash(echo:*)",
+      "Bash(test2.txt)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
