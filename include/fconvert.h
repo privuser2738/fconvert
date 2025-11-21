@@ -51,8 +51,27 @@ typedef enum {
     FILE_TYPE_PRESENTATION,
     FILE_TYPE_DATA,
     FILE_TYPE_GIS,
-    FILE_TYPE_SCIENTIFIC
+    FILE_TYPE_SCIENTIFIC,
+    FILE_TYPE_DISC_IMAGE,
+    FILE_TYPE_VIRTUAL_DISK,
+    FILE_TYPE_FILESYSTEM
 } file_type_category_t;
+
+// Specific file format identifiers for disc/disk images
+typedef enum {
+    DISC_FORMAT_UNKNOWN = 0,
+    DISC_FORMAT_ISO,
+    DISC_FORMAT_BIN,
+    DISC_FORMAT_CUE,
+    DISC_FORMAT_VHD,
+    DISC_FORMAT_CHD,
+    DISC_FORMAT_VMDK,
+    DISC_FORMAT_VDI,
+    DISC_FORMAT_QCOW2,
+    DISC_FORMAT_NRG,
+    DISC_FORMAT_MDF,
+    DISC_FORMAT_MDS
+} disc_format_t;
 
 // Conversion quality presets
 typedef enum {

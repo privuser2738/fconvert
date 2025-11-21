@@ -7,6 +7,7 @@
 #include "png.h"
 #include "jpeg.h"
 #include "tga.h"
+#include "netpbm.h"
 #include "../../core/logger.h"
 #include "../../utils/image_transform.h"
 #include <algorithm>
@@ -62,6 +63,8 @@ fconvert_error_t ImageConverter::convert(
         result = JPEGCodec::decode(input_data, image, params.quality);
     } else if (in_fmt == "tga") {
         result = TGACodec::decode(input_data, image);
+    } else if (in_fmt == "ppm" || in_fmt == "pgm" || in_fmt == "pbm") {
+        result = NetpbmCodec::decode(input_data, image);
     } else {
         core::Logger::instance().error("Unsupported input format: " + input_format);
         return FCONVERT_ERROR_UNSUPPORTED_CONVERSION;
@@ -174,6 +177,12 @@ fconvert_error_t ImageConverter::convert(
         } else {
             result = TGACodec::encode(image, output_data);
         }
+    } else if (out_fmt == "ppm") {
+        result = NetpbmCodec::encode_ppm(image, output_data, true);
+    } else if (out_fmt == "pgm") {
+        result = NetpbmCodec::encode_pgm(image, output_data, true);
+    } else if (out_fmt == "pbm") {
+        result = NetpbmCodec::encode_pbm(image, output_data, true);
     } else {
         core::Logger::instance().error("Unsupported output format: " + output_format);
         return FCONVERT_ERROR_UNSUPPORTED_CONVERSION;

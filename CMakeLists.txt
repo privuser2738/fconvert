@@ -48,6 +48,7 @@ set(SOURCES
     src/formats/image/png.cpp
     src/formats/image/jpeg.cpp
     src/formats/image/tga.cpp
+    src/formats/image/netpbm.cpp
     src/formats/image/image_converter.cpp
 
     # Audio formats
@@ -112,6 +113,17 @@ set(SOURCES
     src/formats/data/toml.cpp
     src/formats/data/ini.cpp
     src/formats/data/data_converter.cpp
+
+    # Disc image formats
+    src/formats/disc/iso.cpp
+    src/formats/disc/bincue.cpp
+    src/formats/disc/vhd.cpp
+    src/formats/disc/chd.cpp
+    src/formats/disc/disc_converter.cpp
+
+    # Filesystem formats
+    src/formats/filesystem/fat32.cpp
+    src/formats/filesystem/ext2.cpp
 )
 
 # Include directories

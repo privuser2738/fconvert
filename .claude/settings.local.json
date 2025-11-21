@@ -16,7 +16,11 @@
       "Bash(tar:*)",
       "Bash(cat:*)",
       "Bash(echo:*)",
-      "Bash(test2.txt)"
+      "Bash(test2.txt)",
+      "Bash(cmd //c \"build.bat release\")",
+      "Bash(cmake:*)",
+      "Bash(test.json)",
+      "Bash(test.md)"
     ],
     "deny": [],
     "ask": []
